@@ -18,8 +18,8 @@ pipeline {
                 echo "Testing release ${RELEASE}..."
             }
         }
-        stage('Deploy') {
-            input {
+        stage('Deploy') { // one more stage in this jenkins file
+            input { //windows alert popup to user
                 message 'Deploy?'
                 ok 'Do it!'
                 parameters {
@@ -31,7 +31,7 @@ pipeline {
             }
         }        
     }
-    post{
+    post{ // to display in the ending of deployment 
         always {
              echo 'Prints whether deploy happened or not, success or failure'
         }
