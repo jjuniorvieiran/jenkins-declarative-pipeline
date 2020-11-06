@@ -21,12 +21,12 @@ pipeline {
         stage('Test') {
             steps {
                echo "Testing release ${RELEASE}"
-               script {
+               script { // running grove inside my pipeline
                   if (Math.random() > 0.5) {
                      throw new Exception()
                   }
                }
-               writeFile file: 'test-results.txt', text: 'passed'               
+               writeFile file: 'test-results.txt', text: 'passed' // generate result file          
             }
         }
    }
