@@ -48,9 +48,9 @@ pipeline {
             }
         }
     }
-}
+} 
 
-String getVersionSuffix() {
+String getVersionSuffix() { //grovy methods used in the pipeline
     if (params.RC) {
         return env.VERSION_RC
     } else {
