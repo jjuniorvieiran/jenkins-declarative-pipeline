@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Audit tools') {                        
             steps {
-                auditTools2 message: 'This is demo 2'
+                auditTools2 message: 'This is demo 2' //passing as a parameter to shared funcition
             }
         }
     }
