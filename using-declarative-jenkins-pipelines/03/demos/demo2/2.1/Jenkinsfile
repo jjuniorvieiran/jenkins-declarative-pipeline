@@ -1,4 +1,4 @@
-library identifier: 'jenkins-pipeline-demo-library@master', 
+library identifier: 'jenkins-pipeline-demo-library@master',  // importing external shared library 
         retriever: modernSCM([$class: 'GitSCMSource', remote: 'https://github.com/sixeyed/jenkins-pipeline-demo-library.git'])
 
 pipeline {

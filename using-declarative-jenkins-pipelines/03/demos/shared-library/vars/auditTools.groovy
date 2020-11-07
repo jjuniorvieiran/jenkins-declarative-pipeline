@@ -1,5 +1,5 @@
-def call() {
-    node {
+def call() { // required 
+    node {   // required
       sh '''
         git version
         docker version
