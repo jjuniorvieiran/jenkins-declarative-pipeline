@@ -1,7 +1,7 @@
 pipeline {
     agent {
         dockerfile {
-            dir 'm4'
+            dir 'm4' //global variable content image detail value
             filename 'Dockerfile.sdk'
         }
     }
