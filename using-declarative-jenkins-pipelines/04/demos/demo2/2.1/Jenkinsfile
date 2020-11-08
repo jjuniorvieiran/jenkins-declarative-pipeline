@@ -1,4 +1,4 @@
-library identifier: 'jenkins-pipeline-demo-library@master', 
+library identifier: 'jenkins-pipeline-demo-library@master', //import shared libraries
         retriever: modernSCM([$class: 'GitSCMSource', remote: 'https://github.com/sixeyed/jenkins-pipeline-demo-library.git'])
 
-simplePipeline()
+simplePipeline() //using simplePipeline where has agent and verify steps
