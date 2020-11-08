@@ -1,4 +1,4 @@
-def image
+def image //explicit saying to use docker image
 
 pipeline {
     agent any
@@ -7,14 +7,15 @@ pipeline {
             steps {
                 script {
                     image = docker.build("sixeyed/pi:psod-pipelines", "--pull -f m4/Dockerfile m4")
+                    //docker build details
                 }                
             }
         }   
         stage('Smoke Test') {
             steps {
                 script {
-                    container = image.run()
-                    container.stop()
+                    container = image.run() //run the image to perform sometest
+                    container.stop() 
               }
             }
         }
@@ -22,7 +23,7 @@ pipeline {
             steps { 
                 script {
                     withDockerRegistry([credentialsId: "docker-hub", url: "" ]) {        
-                        image.push()
+                        image.push() //final stage, log in docker-hub and push the image
                     }     
                 }
             }
