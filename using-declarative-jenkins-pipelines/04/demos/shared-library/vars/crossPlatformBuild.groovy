@@ -14,7 +14,7 @@ def buildAndPush() {
     }
 }
 
-def call(Map config) {
+def call(Map config) { // like a main method in java
     pipeline {
         agent any
         environment {
